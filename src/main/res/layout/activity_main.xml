@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:flow_verticalAlign="top"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/globbackground"
+    tools:context=".MainActivity">
+
+    <!-- Top constraint-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/usasstopcons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" />
+
+    <!-- Left constraint-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/usassleftcons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <!-- Middle constraint-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/usassmidcons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/usrdetalcont"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:alignContent="flex_start"
+        app:alignItems="center"
+        app:flexDirection="column"
+        app:flexWrap="nowrap"
+        app:justifyContent="flex_start"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/assusbottomconst"
+        app:layout_constraintEnd_toEndOf="@+id/usassrightcons"
+        app:layout_constraintStart_toStartOf="@+id/usassleftcons"
+        app:layout_constraintTop_toBottomOf="@+id/usasstopcons">
+
+        <TextView
+            android:id="@+id/srchinput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/taxiappStr"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="5dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:background="@drawable/txtcombresoc" />
+
+        <EditText
+            android:id="@+id/edtxtasn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:background="@drawable/edtxtcomb_resoc"
+            android:hint="@string/taxiappStra"
+            android:inputType="text"
+            android:padding="10dp"
+            android:layout_marginTop="50dp"
+            android:textColor="#ff000000" />
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:alignContent="flex_start"
+        app:alignItems="center"
+        app:flexDirection="row"
+        app:flexWrap="nowrap"
+        app:justifyContent="flex_start"
+        android:layout_marginTop="26dp">
+
+        <Switch
+            android:id="@+id/stateswitch"
+            android:switchMinWidth="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""  />
+
+        <TextView
+            android:id="@+id/switchvew"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/taxiappStrd"
+            android:paddingLeft="15dp"
+            android:paddingRight="10dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="20dp"
+            android:gravity="left"
+            app:layout_flexBasisPercent="60%"/>
+    </com.google.android.flexbox.FlexboxLayout>
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:alignContent="flex_start"
+        app:alignItems="center"
+        app:flexDirection="row"
+        app:flexWrap="nowrap"
+        app:justifyContent="flex_start"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:id="@+id/disttle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/taxiappStre"
+            android:paddingLeft="15dp"
+            android:paddingRight="10dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="10dp"
+            android:gravity="left"
+            app:layout_flexBasisPercent="50%"/>
+
+        <TextView
+            android:id="@+id/timettle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/taxiappStrf"
+            android:paddingLeft="15dp"
+            android:paddingRight="10dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="10dp"
+            android:gravity="left"
+            app:layout_flexBasisPercent="50%"/>
+    </com.google.android.flexbox.FlexboxLayout>
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:alignContent="flex_start"
+        app:alignItems="center"
+        app:flexDirection="row"
+        app:flexWrap="nowrap"
+        app:justifyContent="flex_start">
+
+        <RadioGroup
+            android:id="@+id/distcont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_flexBasisPercent="50%"
+            android:orientation="vertical" >
+
+            <RadioButton
+                android:id="@+id/distrad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/taxiappStrg"
+                android:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/distrada"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/taxiappStrh"/>
+
+            <RadioButton
+                android:id="@+id/distradb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/taxiappStri" />
+
+            <RadioButton
+                android:id="@+id/distradc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/taxiappStrj"/>
+
+            <RadioButton
+                android:id="@+id/distradd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/taxiappStrk"/>
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/timecont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_flexBasisPercent="50%">
+
+            <RadioButton
+                android:id="@+id/timerad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/taxiappStrg"
+                android:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/timerada"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/taxiappStrl"/>
+
+            <RadioButton
+                android:id="@+id/timeradb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/taxiappStrm" />
+
+            <RadioButton
+                android:id="@+id/timeradc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/taxiappStrn"/>
+
+            <RadioButton
+                android:id="@+id/timeradd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/taxiappStro"/>
+        </RadioGroup>
+    </com.google.android.flexbox.FlexboxLayout>
+
+        <Button
+            android:id="@+id/serchbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="40dip"
+            android:layout_marginTop="26dp"
+            android:background="@drawable/btncombresoc"
+            android:padding="10dp"
+            android:text="@string/taxiappStrb"
+            android:textAllCaps="false"
+            android:textColor="#ffffffff" />
+    </com.google.android.flexbox.FlexboxLayout>
+
+    <!-- Right constraint-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/usassrightcons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <!-- Bottom constraint-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/assusbottomconst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" />
+
+    <Button
+        android:id="@+id/exitbtn"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="0dp"
+        android:paddingLeft="30dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:gravity="left"
+        android:textAllCaps="false"
+        android:textAlignment="gravity"
+        android:text="@string/taxiappStrc"
+        android:textColor="#ffffffff"
+        android:background="@drawable/usrtypecomb"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/usassmidcons"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/assusbottomconst" />
+</androidx.constraintlayout.widget.ConstraintLayout>

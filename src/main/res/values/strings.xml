@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Taxiapp</string>
+    <string name="taxiappStr">Trip search</string>
+    <string name="taxiappStra">Enter search term..</string>
+
+    <string name="taxiappStrb">Search</string>
+    <string name="taxiappStrc">Exit app</string>
+    <string name="taxiappStrd">Include cancelled trips</string>
+
+    <string name="taxiappStre">Distance</string>
+    <string name="taxiappStrf">Time</string>
+    <string name="taxiappStrg">Any</string>
+
+    <string name="taxiappStrh">Under 3km</string>
+    <string name="taxiappStri">3 to 8km</string>
+    <string name="taxiappStrj">8 to 15km</string>
+    <string name="taxiappStrk">More than 15km</string>
+
+    <string name="taxiappStrl">Under 5min</string>
+    <string name="taxiappStrm">5 to 10min</string>
+    <string name="taxiappStrn">10 to 20min</string>
+    <string name="taxiappStro">More than 20min</string>
+
+    <string name="taxiappStrp">More than 20 min</string>
+    <string name="taxiappStrq">All</string>
+    <string name="taxiappStrr">COMPLETED</string>
+    <string name="taxiappStrs">nada</string>
+
+    <string name="taxiappStrt">hidden</string>
+    <string name="taxiappStru">Home</string>
+    <string name="title_activity_singlerecod">Map</string>
+    <string name="taxiappStrv">Back</string>
+    <string name="taxiappStrw">Trip details</string>
+</resources>

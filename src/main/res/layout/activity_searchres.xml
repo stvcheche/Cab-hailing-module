@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/globbackground"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".searchres.Searchres">
+
+    <!-- Top constraint-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/srchesactopcons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.0" />
+
+    <LinearLayout
+        android:id="@+id/srchesparent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/srchesactopconsa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/srchesactopcons">
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/actionbarstyl"
+            android:padding="5dp"
+            app:alignContent="flex_start"
+            app:alignItems="center"
+            app:flexDirection="row"
+            app:flexWrap="nowrap">
+
+            <Button
+                android:id="@+id/srchesBck"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/bckimgbtncomb"
+                android:drawableLeft="@drawable/backarrw"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:paddingTop="6dp"
+                android:paddingRight="11dp"
+                android:paddingBottom="6dp"
+                android:text="@string/taxiappStru"
+                android:textAllCaps="false"
+                app:layout_flexBasisPercent="23%"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/srchestitle_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                app:layout_flexBasisPercent="55%"
+                app:layout_flexGrow="1" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/trans"
+                app:layout_flexBasisPercent="15%"/>
+        </com.google.android.flexbox.FlexboxLayout>
+
+        <LinearLayout
+            android:id="@+id/srcheslinusers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <ProgressBar
+                android:id="@+id/srchesprogress"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="-6dp"
+                android:layout_marginBottom="-6dp"
+                android:background="@color/dividerclr"
+                android:indeterminate="true"
+                android:indeterminateTint="@color/lightgreen" />
+
+            <LinearLayout
+                android:id="@+id/srcheshedcont"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+            <ScrollView
+                android:id="@+id/srchesscrollview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </ScrollView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Constraint B-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/srchesactopconsa"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal" />
+
+    <!-- Tab management and status -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <TextView
+            android:id="@+id/srcheskey"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/taxiappStrt" />
+
+        <TextView
+            android:id="@+id/srcheswitch"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/taxiappStrt" />
+
+        <TextView
+            android:id="@+id/srchesdist"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/taxiappStrt" />
+
+        <TextView
+            android:id="@+id/srchestime"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/taxiappStrt" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

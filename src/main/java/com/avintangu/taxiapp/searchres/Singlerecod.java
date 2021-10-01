@@ -125,7 +125,7 @@ public class Singlerecod extends FragmentActivity implements OnMapReadyCallback,
 
         //Execute Directions API request
         GeoApiContext context = new GeoApiContext.Builder()
-                .apiKey("AIzaSyDsMPOpkCGlRBt8GT38YZll9cyFcbp6Ox8")
+                .apiKey("your key")
                 .build();
         DirectionsApiRequest req = DirectionsApi.getDirections(context, "41.385064,2.173403", "40.416775,-3.70379");
         try {
